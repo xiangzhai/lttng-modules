@@ -46,7 +46,7 @@ LTTNG_TRACEPOINT_EVENT_INSTANCE(timer_class, timer_init,
 )
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4,2,0) || \
-	LTTNG_RHEL_KERNEL_RANGE(3,10,0,957,0,0, 3,11,0,0,0,0))
+	LTTNG_RHEL_KERNEL_RANGE(3,10,0,957,0,0, 3,11,0,0,0,0)) && defined(__mips64__)
 /**
  * timer_start - called when the timer is started
  * @timer:	pointer to struct timer_list
